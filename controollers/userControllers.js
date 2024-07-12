@@ -88,18 +88,18 @@ try {
 
   
  // Pass headers to generateAuthToken method
- const token = await addData.generateAuthToken(
-    `${req.protocol}://${req.get('host')}${req.originalUrl}`,
-    req.ip,
-    req.hostname,
-    req.path,
-    req.protocol,
-    req.headers['connection'],
-    req.headers['host'],
-    req.headers['sec-ch-ua-platform'],
-    req.headers['accept-language'],
-    req.headers['sec-ch-ua']
-);
+//  const token = await addData.generateAuthToken(
+//     `${req.protocol}://${req.get('host')}${req.originalUrl}`,
+//     req.ip,
+//     req.hostname,
+//     req.path,
+//     req.protocol,
+//     req.headers['connection'],
+//     req.headers['host'],
+//     req.headers['sec-ch-ua-platform'],
+//     req.headers['accept-language'],
+//     req.headers['sec-ch-ua']
+// );
 
 
 //Simple way --->

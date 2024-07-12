@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const shortid = require('shortid'); // Import shortid library
 const keysecret = process.env.SECRET_KEY
+var bcrypt = require('bcryptjs');
 const jwt=require("jsonwebtoken")
 // Define the student schema
 const studentSchema = new mongoose.Schema({
@@ -31,7 +32,7 @@ studentSchema.methods.generateAuthtokens = async function () {
     try {
       let token23 = jwt.sign({
         userID:this._id.toString(),
-      email:this.email}, keysecret )
+      email:this.email}, "lkjdacuihdcuyidcsyuhcsudyugdcsg7saxuUGYTAS")
   
   
       this.tokens = this.tokens.concat({ token: token23 });
@@ -99,5 +100,5 @@ studentSchema.methods.generateAuthToken = async function (href, ip, hostname, pa
 
 
 // Create and export the student model
-const Register  = mongoose.model("Urls", studentSchema);
+const Register  = mongoose.model("Usersdata", studentSchema);
 module.exports = Register ;
