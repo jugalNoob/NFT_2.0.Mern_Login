@@ -32,7 +32,7 @@ studentSchema.methods.generateAuthtokens = async function () {
     try {
       let token23 = jwt.sign({
         userID:this._id.toString(),
-      email:this.email}, "lkjdacuihdcuyidcsyuhcsudyugdcsg7saxuUGYTAS")
+      email:this.email}, "kjnxcahbkhjbdscjghydcsbhjugtydcsgudcxasxytgdcsgdtgcs")
   
   
       this.tokens = this.tokens.concat({ token: token23 });
@@ -100,5 +100,5 @@ studentSchema.methods.generateAuthToken = async function (href, ip, hostname, pa
 
 
 // Create and export the student model
-const Register  = mongoose.model("Usersdata", studentSchema);
+const Register  = mongoose.model("Url", studentSchema);
 module.exports = Register ;
